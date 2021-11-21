@@ -13,10 +13,6 @@ class Start(commands.Cog):
     async def on_ready(self):
         print(f'Bot is online.')
 
-    @cog_ext.cog_slash(name = 'Ping', description = 'Returns pong')
-    async def ping(self, ctx):
-        await ctx.send(f'Pong!')
-
 
 def setup(client):
     client.add_cog(Start(client))        
